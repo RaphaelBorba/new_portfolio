@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base{
+    body{
+        @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        @apply font-bold
+    }
+
+    h1{
+        @apply text-4xl sm:text-5xl md:text-6xl
+    }
+
+    h2{
+        @apply text-3xl sm:text-4xl
+    }
+
+    li{
+        @apply cursor-pointer
+    }
+
+    button{
+        @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+    }
+}
+
+/* HEADER DESKTOP */
+
+.header__desktop{
+    @apply flex h-full w-full items-center justify-between px-2 2xl:px-16
+}
+
+.header__desktop__li{
+    @apply ml-10 text-sm uppercase hover:border-b
+}
+
+/*  HEADER MOBILE */
+
+.header__mobile__darkscreen{
+    @apply fixed left-0 top-0 h-screen w-full bg-black/70 md:hidden
+}
+
+.header__mobile__box{
+    @apply fixed left-0 top-0 h-screen w-[75%] bg-[#ecf0f3] p-10 duration-[400ms] ease-in sm:w-[60%] md:w-[45%]
+}
+
+.header__mobile__icons{
+
+    @apply cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105
+}
