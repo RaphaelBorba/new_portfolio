@@ -32,7 +32,7 @@
 /* HEADER DESKTOP */
 
 .header__desktop{
-    @apply flex h-full w-full items-center justify-between px-2 2xl:px-16
+    @apply flex h-full bg-gray-light w-full items-center justify-between px-2 2xl:px-16
 }
 
 .header__desktop__li{
@@ -41,7 +41,7 @@
 
 /*  HEADER MOBILE */
 
-.header__mobile__darkscreen{
+.header__mobile{
     @apply fixed left-0 top-0 h-screen w-full bg-black/70 md:hidden
 }
 

@@ -7,7 +7,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleNav: () => void }) {
 
     return (
-        <div className={nav ? "header__mobile__darkscreen" : ""}>
+        <div className={nav ? "header__mobile" : ""}>
             <div
                 className={nav ? "header__mobile__box"
                     : "fixed left-[-100%] top-0 p-10  duration-500 ease-in"}>
