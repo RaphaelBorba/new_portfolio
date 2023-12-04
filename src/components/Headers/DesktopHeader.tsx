@@ -31,6 +31,11 @@ export default function DesktopHeader({ handleNav }: { handleNav: () => void }) 
                     </Link>
                     <Link href="/">
                         <li className="header__desktop__li">
+                            Projects
+                        </li>
+                    </Link>
+                    <Link href="/">
+                        <li className="header__desktop__li">
                             Contact
                         </li>
                     </Link>

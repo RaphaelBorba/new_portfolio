@@ -92,3 +92,10 @@
 .project__card__info__box{
     @apply absolute left-[50%] top-[50%] hidden translate-x-[-50%] translate-y-[-50%]
 }
+
+/* CONTACT */
+
+.contact__icons{
+
+    @apply cursor-pointer rounded-full p-4 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110
+}
