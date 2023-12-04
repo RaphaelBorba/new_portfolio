@@ -1,6 +1,6 @@
 
 
-export const routesImages = [
+export const skillsInfos = [
     {tech: "HTML", path:"/skills/html.svg"},
     {tech: "CSS", path:"/skills/css.svg"},
     {tech: "Javascript", path:"/skills/javascript.svg"},
@@ -19,4 +19,22 @@ export const routesImages = [
     {tech: "Jest", path:"/skills/jest.svg"},
     {tech: "Linux", path:"/skills/linux.svg"},
     {tech: "Windows", path:"/skills/windows.svg"},
+]
+
+export const projectsInfos = [
+    {
+        title:"Car Hub",
+        stack:"Next JS",
+        imgPath:"/projects/carhub.png"
+    },
+    {
+        title:"Spider Verse",
+        stack:"Next JS",
+        imgPath:"/projects/spiderverse.png"
+    },
+    {
+        title:"TrackIt",
+        stack:"React JS",
+        imgPath:"/projects/trackit.png"
+    }
 ]

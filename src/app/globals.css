@@ -25,8 +25,14 @@
     }
 
     button{
-        @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-purple-dark to-blue-light text-white
+        @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r gr__purple__to__blue text-white
     }
+}
+
+/* GRADIENT COLORS */
+
+.gr__purple__to__blue{
+    @apply from-purple-dark to-blue-light
 }
 
 /* HEADER DESKTOP */
@@ -70,4 +76,11 @@
 
 .section__p{
     @apply py-2 text-gray-600
+}
+
+/* PROJECTS */
+
+.projects__card{
+
+    @apply gr__purple__to__blue relative flex h-auto w-full items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 hover:bg-gradient-to-r
 }
