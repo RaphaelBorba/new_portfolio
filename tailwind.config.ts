@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "gray-light": "#ecf0f3",
+        "blue-dark":"#1f2937",
+        "purple-dark":"#5651e5",
+        "blue-light":"#709dff"
+      }
     },
   },
   plugins: [],

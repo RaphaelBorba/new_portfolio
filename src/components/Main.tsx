@@ -1,4 +1,4 @@
-import { AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
+import { AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
@@ -10,7 +10,7 @@ export default function Main() {
                 <div>
                     <p className="text-sm uppercase tracking-widest text-gray-600">Lets do somithing</p>
                     <h1 className="py-4 text-gray-700">
-                        Hi, I&apos;m    <span className="text-[#5651e5]">Raphael</span>
+                        Hi, I&apos;m    <span className="text-purple-dark">Raphael</span>
                     </h1>
                     <h1 className="py-4 text-gray-700">
                         A Full-Stack Web Developer

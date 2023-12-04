@@ -46,7 +46,7 @@ export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleN
                         </Link>
                     </ul>
                     <div className="pt-40">
-                        <p className="uppercase tracking-widest text-[#5651e5]">Let&apos;s connect</p>
+                        <p className="uppercase tracking-widest text-purple-dark">Let&apos;s connect</p>
                         <div className="my-4 flex w-full items-center justify-between sm:w-[80%]">
                             <div className="header__mobile__icons">
                                 <FaLinkedinIn />
