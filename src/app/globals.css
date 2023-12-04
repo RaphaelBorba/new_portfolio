@@ -84,3 +84,11 @@
 
     @apply gr__purple__to__blue relative flex h-auto w-full items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 hover:bg-gradient-to-r
 }
+
+.project__card__info__button{
+    @apply cursor-pointer rounded-lg bg-white w-44 py-3 text-center text-lg font-bold text-gray-700
+}
+
+.project__card__info__box{
+    @apply absolute left-[50%] top-[50%] hidden translate-x-[-50%] translate-y-[-50%]
+}
