@@ -52,16 +52,19 @@ export const projectsData = {
     {
         title: "Car Hub",
         stack: "Next JS",
-        imgPath: "/projects/carhub.png"
+        imgPath: "/projects/carhub.png",
+        pagePath:"carhub"
     },
     {
         title: "Spider Verse",
         stack: "Next JS",
-        imgPath: "/projects/spiderverse.png"
+        imgPath: "/projects/spiderverse.png",
+        pagePath:"spiderverse"
     },
     {
         title: "TrackIt",
         stack: "React JS",
-        imgPath: "/projects/trackit.png"
+        imgPath: "/projects/trackit.png",
+        pagePath:"trackit"
     }
 ]}

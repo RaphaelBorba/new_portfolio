@@ -6,6 +6,7 @@ interface IProps {
         title: string;
         stack: string;
         imgPath: string;
+        pagePath:string;
     }
 }
 
@@ -24,7 +25,7 @@ export default function ProjectCard({ data }: IProps) {
             <div className="project__card__info__box group-hover:block">
                 <h3 className="text-center text-2xl tracking-wider text-white">{data.title}</h3>
                 <p className="pb-4 pt-2 text-center text-white">{data.stack}</p>
-                <Link href="/">
+                <Link href={`/project/${data.pagePath}`}>
                     <p className="project__card__info__button">More Info</p>
                 </Link>
             </div>

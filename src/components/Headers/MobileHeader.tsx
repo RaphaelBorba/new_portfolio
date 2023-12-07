@@ -2,20 +2,9 @@ import Image from "next/image";
 import { AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import { handleScroll } from "@/utils";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleNav: () => void }) {
-    const router = useRouter()
-
-    const handleClickToScroll = (tagId: string) => {
-        handleNav()
-        const bool = handleScroll(tagId)
-        if (!bool) {
-            router.push("/")
-            setTimeout(() => handleScroll(tagId), 300)
-        }
-    }
 
     return (
         <div className={nav ? "header__mobile" : ""}>
@@ -24,13 +13,15 @@ export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleN
                     : "fixed left-[-100%] top-0 p-10  duration-500 ease-in"}>
                 <div>
                     <div className="flex w-full items-center justify-between">
-                        <Image
-                            onClick={() => handleClickToScroll("main")}
-                            alt="logo"
-                            src="/rb.png"
-                            width={85}
-                            height={85}
-                        />
+                        <Link href="/#main">
+                            <Image
+                                onClick={handleNav}
+                                alt="logo"
+                                src="/rb.png"
+                                width={85}
+                                height={85}
+                            />
+                        </Link>
                         <div onClick={handleNav} className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400">
                             <AiOutlineClose />
                         </div>
@@ -41,11 +32,21 @@ export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleN
                 </div>
                 <div className="flex flex-col py-4">
                     <ul className="uppercase">
-                        <li onClick={() => handleClickToScroll("main")} className="py-4 text-sm">Home</li>
-                        <li onClick={() => handleClickToScroll("about")} className="py-4 text-sm">About</li>
-                        <li onClick={() => handleClickToScroll("skills")} className="py-4 text-sm">Skills</li>
-                        <li onClick={() => handleClickToScroll("projects")} className="py-4 text-sm">Projects</li>
-                        <li onClick={() => handleClickToScroll("contact")} className="py-4 text-sm">Contact</li>
+                        <Link href="/#main">
+                            <li onClick={handleNav} className="py-4 text-sm">Home</li>
+                        </Link>
+                        <Link href="/#about">
+                            <li onClick={handleNav} className="py-4 text-sm">About</li>
+                        </Link>
+                        <Link href="/#skills">
+                            <li onClick={handleNav} className="py-4 text-sm">Skills</li>
+                        </Link>
+                        <Link href="/#projects">
+                            <li onClick={handleNav} className="py-4 text-sm">Projects</li>
+                        </Link>
+                        <Link href="/#contact">
+                            <li onClick={handleNav} className="py-4 text-sm">Contact</li>
+                        </Link>
                     </ul>
                     <div className="pt-40">
                         <p className="uppercase tracking-widest text-purple-dark">Let&apos;s connect</p>

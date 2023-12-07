@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: smooth;
+}
 
 @layer base{
     body{
@@ -38,7 +41,7 @@
 /* HEADER DESKTOP */
 
 .header__desktop{
-    @apply flex h-full bg-gray-light w-full items-center justify-between px-2 2xl:px-16
+    @apply flex h-full  w-full items-center justify-between px-2 2xl:px-16
 }
 
 .header__desktop__li{
