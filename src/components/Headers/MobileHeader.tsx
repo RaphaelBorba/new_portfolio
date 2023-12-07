@@ -25,6 +25,7 @@ export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleN
                 <div>
                     <div className="flex w-full items-center justify-between">
                         <Image
+                            onClick={() => handleClickToScroll("main")}
                             alt="logo"
                             src="/rb.png"
                             width={85}
