@@ -1,7 +1,5 @@
-import { AiOutlineMail } from 'react-icons/ai'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { mainData } from '@/constants'
+import IconSection from './IconSection'
 
 export default function Main() {
 
@@ -19,20 +17,7 @@ export default function Main() {
                     <p className="m-auto max-w-[70%] py-4 text-gray-600">
                         {mainData.description}
                     </p>
-                    <div className="m-auto flex max-w-[330px] items-center justify-between py-4">
-                        <div className='main__icons'>
-                            <FaLinkedinIn size={20} />
-                        </div>
-                        <div className='main__icons'>
-                            <FaGithub size={20} />
-                        </div>
-                        <div className='main__icons'>
-                            <AiOutlineMail size={20} />
-                        </div>
-                        <div className='main__icons'>
-                            <BsFillPersonLinesFill size={20} />
-                        </div>
-                    </div>
+                    <IconSection padding='p-6' />
                 </div>
             </div>
         </div>

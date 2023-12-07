@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { AiOutlineClose } from 'react-icons/ai'
 import Link from "next/link";
+import IconSection from "../IconSection";
 
 export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleNav: () => void }) {
 
@@ -50,20 +49,7 @@ export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleN
                     </ul>
                     <div className="pt-40">
                         <p className="uppercase tracking-widest text-purple-dark">Let&apos;s connect</p>
-                        <div className="my-4 flex w-full items-center justify-between sm:w-[80%]">
-                            <div className="header__mobile__icons">
-                                <FaLinkedinIn />
-                            </div>
-                            <div className="header__mobile__icons">
-                                <FaGithub />
-                            </div>
-                            <div className="header__mobile__icons">
-                                <AiOutlineMail />
-                            </div>
-                            <div className="header__mobile__icons">
-                                <BsFillPersonLinesFill />
-                            </div>
-                        </div>
+                        <IconSection padding="p-3" />
                     </div>
                 </div>
             </div>

@@ -1,15 +1,18 @@
 "use client"
 import { handleScroll } from "@/utils";
 import Image from "next/image";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import contactImage from '../../public/contact.jpg'
+import IconSection from "./IconSection";
+import { FormEvent } from "react";
 
 
 
 export default function Contact() {
+
+    const handleForm = (e:FormEvent) => {
+        e.preventDefault()
+    }
 
     return (
         <section id="contact" className="w-full scroll-mt-10 lg:h-screen">
@@ -35,20 +38,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <p className="pt-8 uppercase">Connect With Me</p>
-                                <div className="flex max-w-[330px] items-center justify-between py-4">
-                                    <div className='contact__icons'>
-                                        <FaLinkedinIn size={20} />
-                                    </div>
-                                    <div className='contact__icons'>
-                                        <FaGithub size={20} />
-                                    </div>
-                                    <div className='contact__icons'>
-                                        <AiOutlineMail size={20} />
-                                    </div>
-                                    <div className='contact__icons'>
-                                        <BsFillPersonLinesFill size={20} />
-                                    </div>
-                                </div>
+                                <IconSection padding="p-4" />
                             </div>
                         </div>
                     </div>
@@ -56,7 +46,7 @@ export default function Contact() {
 
                     <div className="col-span-3 h-auto w-full rounded-xl shadow-xl shadow-gray-400 lg:p-4">
                         <div className="p-4">
-                            <form >
+                            <form onSubmit={handleForm} >
                                 <div className="grid w-full gap-4 py-2 md:grid-cols-2">
                                     <div className="flex flex-col">
                                         <label htmlFor="name" className="py-2 text-sm uppercase">Name</label>
@@ -88,7 +78,7 @@ export default function Contact() {
 
                     <div
                         onClick={() => handleScroll("main")}
-                        className="contact__icons text-purple-dark">
+                        className="page__icons p-6 text-purple-dark">
                         <HiOutlineChevronDoubleUp size={23} />
                     </div>
 

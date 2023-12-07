@@ -1,12 +1,34 @@
+"use client"
+import { projectsData } from "@/constants";
 import Image from "next/image";
-import { RiRadioButtonFill} from "react-icons/ri"
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { RiRadioButtonFill } from "react-icons/ri"
 
 interface IProps {
     params: any
 }
 
+interface IProject {
+    title: string;
+    mainStack: string;
+    imgPath: string;
+    pagePath: string;
+    pageDetails: {
+        description: string;
+        linkDeploy: string;
+        linkRepo: string;
+        stack: string[];
+    }
+}
+
 export default function ProjectScreen({ params }: IProps) {
 
+    const [project, setProject] = useState<IProject | undefined>(undefined)
+
+    useEffect(() => {
+        setProject(projectsData.projects.find((value) => value.pagePath === params.projectName))
+    }, [params])
 
     return (
         <main className="w-full">
@@ -20,33 +42,46 @@ export default function ProjectScreen({ params }: IProps) {
                     className="absolute z-[1]"
                 />
                 <div className=" absolute inset-x-[50%] top-[70%] z-20 w-full max-w-[1240px] translate-x-[-50%] translate-y-[-50%] p-2 text-white">
-                    <h2 className="py-2">{"CARHUB"}</h2>
-                    <h3>{"STACK"}</h3>
+                    <h2 className="py-2">{project?.title}</h2>
+                    <h3>{project?.mainStack}</h3>
                 </div>
             </div>
             <div className="mx-auto grid max-w-[1240px] gap-8 p-2 pt-8 md:grid-cols-5">
                 <div className="col-span-4 ">
                     <p className="section__first__title">Project</p>
                     <h2>Overview</h2>
-                    <p>{"TEXT"}</p>
-                    <button className="mr-8 mt-4 px-8 py-2">Demo</button>
-                    <button className="mt-4 px-8 py-2">Demo</button>
-                </div>
-            <div className="col-span-4 rounded-xl p-4 shadow-lg shadow-gray-400 md:col-span-1">
-                <div className="p-2">
-                    <p className="pb-2 text-center font-bold">Technologies</p>
-                    <div className="grid-cols-3 md:grid-cols-1">
-                        <p className="flex items-center py-2 text-gray-600"><RiRadioButtonFill className="pr-1"/>{"TECH"}</p>
-                        <p className="flex items-center py-2 text-gray-600"><RiRadioButtonFill className="pr-1"/>{"TECH"}</p>
-                        <p className="flex items-center py-2 text-gray-600"><RiRadioButtonFill className="pr-1"/>{"TECH"}</p>
-                        <p className="flex items-center py-2 text-gray-600"><RiRadioButtonFill className="pr-1"/>{"TECH"}</p>
-                        <p className="flex items-center py-2 text-gray-600"><RiRadioButtonFill className="pr-1"/>{"TECH"}</p>
-                        <p className="flex items-center py-2 text-gray-600"><RiRadioButtonFill className="pr-1"/>{"TECH"}</p>
-                        <p className="flex items-center py-2 text-gray-600"><RiRadioButtonFill className="pr-1"/>{"TECH"}</p>
-                    </div>
-                </div>
+                    <p>{project?.pageDetails.description}</p>
+                    <a href={project?.pageDetails.linkDeploy} target="_blank">
+                        <button className="mr-8 mt-4 px-8 py-2">Demo</button>
+                    </a>
+                    <a href={project?.pageDetails.linkRepo} target="_blank">
+                        <button className="mt-4 px-8 py-2">Repository</button>
+                    </a>
 
-            </div>
+                </div>
+                <div className="col-span-4 rounded-xl p-4 shadow-lg shadow-gray-400 md:col-span-1">
+                    <div className="p-2">
+                        <p className="pb-2 text-center font-bold">Technologies</p>
+                        <div className="grid-cols-3 md:grid-cols-1">
+                            {
+                                project?.pageDetails.stack.map((value, index) => (
+                                    <p
+                                        key={index}
+                                        className="flex items-center py-2 text-gray-600"
+                                    >
+                                        <RiRadioButtonFill className="pr-1" />
+                                        {value}
+                                    </p>
+                                ))
+                            }
+
+                        </div>
+                    </div>
+
+                </div>
+                <Link href={"/#projects"} className="uppercase underline">
+                    Back
+                </Link>
             </div>
         </main>
     )
