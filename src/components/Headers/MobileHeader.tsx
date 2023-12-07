@@ -3,12 +3,18 @@ import { AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { handleScroll } from "@/utils";
+import { useRouter } from "next/navigation";
 
 export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleNav: () => void }) {
+    const router = useRouter()
 
-    const handleClickToScroll = (tagId:string) =>{
+    const handleClickToScroll = (tagId: string) => {
         handleNav()
-        handleScroll(tagId)
+        const bool = handleScroll(tagId)
+        if (!bool) {
+            router.push("/")
+            setTimeout(() => handleScroll(tagId), 300)
+        }
     }
 
     return (
