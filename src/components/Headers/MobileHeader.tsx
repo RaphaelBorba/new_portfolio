@@ -1,10 +1,15 @@
 import Image from "next/image";
-import Link from "next/link";
 import { AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { handleScroll } from "@/utils";
 
 export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleNav: () => void }) {
+
+    const handleClickToScroll = (tagId:string) =>{
+        handleNav()
+        handleScroll(tagId)
+    }
 
     return (
         <div className={nav ? "header__mobile" : ""}>
@@ -29,21 +34,11 @@ export default function MobileHeader({ nav, handleNav }: { nav: boolean, handleN
                 </div>
                 <div className="flex flex-col py-4">
                     <ul className="uppercase">
-                        <Link href="/">
-                            <li className="py-4 text-sm">Home</li>
-                        </Link>
-                        <Link href="/">
-                            <li className="py-4 text-sm">About</li>
-                        </Link>
-                        <Link href="/">
-                            <li className="py-4 text-sm">Skills</li>
-                        </Link>
-                        <Link href="/">
-                            <li className="py-4 text-sm">Projects</li>
-                        </Link>
-                        <Link href="/">
-                            <li className="py-4 text-sm">Contact</li>
-                        </Link>
+                        <li onClick={() => handleClickToScroll("main")} className="py-4 text-sm">Home</li>
+                        <li onClick={() => handleClickToScroll("about")} className="py-4 text-sm">About</li>
+                        <li onClick={() => handleClickToScroll("skills")} className="py-4 text-sm">Skills</li>
+                        <li onClick={() => handleClickToScroll("projects")} className="py-4 text-sm">Projects</li>
+                        <li onClick={() => handleClickToScroll("contact")} className="py-4 text-sm">Contact</li>
                     </ul>
                     <div className="pt-40">
                         <p className="uppercase tracking-widest text-purple-dark">Let&apos;s connect</p>

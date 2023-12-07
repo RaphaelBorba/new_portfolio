@@ -5,7 +5,7 @@ import SkillCard from "./Skills/SkillCard";
 export default function Skills() {
 
     return (
-        <section className="w-full p-2 lg:h-screen">
+        <section id="skills" className="w-full scroll-mt-24 p-2 md:scroll-mt-0 lg:h-screen">
             <div className="mx-auto flex h-full max-w-[1240px] flex-col justify-center">
                 <p className="section__first__title">Skills</p>
                 <h2 className="py-4">What I Can Do</h2>

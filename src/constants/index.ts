@@ -8,6 +8,7 @@ export const skillsInfos = [
     {tech: "React", path:"/skills/react.svg"},
     {tech: "Next", path:"/skills/next.svg"},
     {tech: "Tailwind", path:"/skills/tailwind.svg"},
+    {tech: "Figma", path:"/skills/figma.svg"},
     {tech: "Node", path:"/skills/node.svg"},
     {tech: "Express", path:"/skills/express.svg"},
     {tech: "Nest", path:"/skills/nest.svg"},

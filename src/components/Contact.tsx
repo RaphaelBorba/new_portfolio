@@ -1,3 +1,5 @@
+"use client"
+import { handleScroll } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
@@ -10,7 +12,7 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 export default function Contact() {
 
     return (
-        <section className="w-full lg:h-screen">
+        <section id="contact" className="w-full scroll-mt-10 lg:h-screen">
             <div className="m-auto w-full max-w-[1240px] px-2 py-16">
                 <p className="section__first__title">Contact</p>
                 <h2 className="py-4">Get In Touch</h2>
@@ -76,7 +78,7 @@ export default function Contact() {
                                 </div>
                                 <div className="flex flex-col">
                                     <label htmlFor="" className="py-2 text-sm uppercase">Message</label>
-                                    <textarea rows={10} className="rounded-lg border-2 border-gray-300 p-3"/>
+                                    <textarea rows={10} className="rounded-lg border-2 border-gray-300 p-3" />
                                 </div>
                                 <button className="mt-4 w-full p-4 text-gray-100">Send Message</button>
                             </form>
@@ -84,11 +86,13 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="flex justify-center pt-12">
-                    <Link href="/">
-                    <div className="contact__icons text-purple-dark">
-                        <HiOutlineChevronDoubleUp size={23}/>
+
+                    <div
+                        onClick={() => handleScroll("main")}
+                        className="contact__icons text-purple-dark">
+                        <HiOutlineChevronDoubleUp size={23} />
                     </div>
-                    </Link>
+
                 </div>
             </div>
         </section>

@@ -5,7 +5,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 export default function Main() {
 
     return (
-        <div className="h-screen w-full text-center">
+        <div id='main' className="h-screen w-full text-center">
             <div className="mx-auto flex h-full w-full max-w-[1240px] items-center justify-center p-2">
                 <div>
                     <p className="text-sm uppercase tracking-widest text-gray-600">Lets do somithing</p>

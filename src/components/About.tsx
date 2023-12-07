@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function About() {
 
     return (
-        <section className="flex w-full items-center p-2 py-16 md:h-screen">
+        <section id="about" className="flex w-full scroll-mt-10 items-center p-2 py-16 md:h-screen">
             <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid">
                 <div className="col-span-2">
                     <p className="section__first__title">About</p>

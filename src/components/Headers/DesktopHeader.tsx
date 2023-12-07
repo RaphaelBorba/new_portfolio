@@ -1,5 +1,5 @@
+import { handleScroll } from "@/utils";
 import Image from "next/image";
-import Link from "next/link";
 import { AiOutlineMenu } from 'react-icons/ai'
 
 export default function DesktopHeader({ handleNav }: { handleNav: () => void }) {
@@ -14,31 +14,21 @@ export default function DesktopHeader({ handleNav }: { handleNav: () => void }) 
             />
             <div>
                 <ul className="hidden md:flex">
-                    <Link href="/">
-                        <li className="header__desktop__li">
-                            Home
-                        </li>
-                    </Link>
-                    <Link href="/">
-                        <li className="header__desktop__li">
-                            About
-                        </li>
-                    </Link>
-                    <Link href="/">
-                        <li className="header__desktop__li">
-                            Skills
-                        </li>
-                    </Link>
-                    <Link href="/">
-                        <li className="header__desktop__li">
-                            Projects
-                        </li>
-                    </Link>
-                    <Link href="/">
-                        <li className="header__desktop__li">
-                            Contact
-                        </li>
-                    </Link>
+                    <li onClick={()=>handleScroll("main")} className="header__desktop__li">
+                        Home
+                    </li>
+                    <li onClick={()=>handleScroll("about")} className="header__desktop__li">
+                        About
+                    </li>
+                    <li onClick={()=>handleScroll("skills")} className="header__desktop__li">
+                        Skills
+                    </li>
+                    <li onClick={()=>handleScroll("projects")} className="header__desktop__li">
+                        Projects
+                    </li>
+                    <li onClick={()=>handleScroll("contact")} className="header__desktop__li">
+                        Contact
+                    </li>
                 </ul>
                 <div onClick={handleNav} className="md:hidden">
                     <AiOutlineMenu size={25} />
