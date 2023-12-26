@@ -27,9 +27,6 @@ html{
         @apply cursor-pointer
     }
 
-    button{
-        @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r gr__purple__to__blue text-white
-    }
 }
 
 /* GRADIENT COLORS */
@@ -85,7 +82,7 @@ html{
 
 .projects__card{
 
-    @apply gr__purple__to__blue relative flex h-auto w-full items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 hover:bg-gradient-to-r
+    @apply relative flex h-auto w-full items-center justify-center transition duration-1000 rounded-xl p-4 shadow-xl shadow-gray-400 hover:bg-purple-dark
 }
 
 .project__card__info__button{
@@ -93,5 +90,10 @@ html{
 }
 
 .project__card__info__box{
-    @apply absolute left-[50%] top-[50%] hidden translate-x-[-50%] translate-y-[-50%]
+    @apply absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 transition duration-500
+}
+
+
+.button_gradiant{
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r gr__purple__to__blue text-white
 }

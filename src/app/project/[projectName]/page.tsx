@@ -46,20 +46,28 @@ export default function ProjectScreen({ params }: IProps) {
                     <h3>{project?.mainStack}</h3>
                 </div>
             </div>
-            <div className="mx-auto grid max-w-[1240px] gap-8 p-2 pt-8 md:grid-cols-5">
+            <div className="mx-auto grid max-w-[1240px] gap-4 p-2 py-8 md:grid-cols-5">
                 <div className="col-span-4 ">
                     <p className="section__first__title">Project</p>
                     <h2>Overview</h2>
-                    <p>{project?.pageDetails.description}</p>
-                    <a href={project?.pageDetails.linkDeploy} target="_blank">
-                        <button className="mr-8 mt-4 px-8 py-2">Demo</button>
-                    </a>
-                    <a href={project?.pageDetails.linkRepo} target="_blank">
-                        <button className="mt-4 px-8 py-2">Repository</button>
-                    </a>
+                    <div className="mt-4 flex flex-col gap-4" dangerouslySetInnerHTML={{ __html: project?.pageDetails.description! }} />
+                    <div className="flex flex-row gap-4">
+                        <a href={project?.pageDetails.linkDeploy} target="_blank">
+                            <button
+                                className="mt-4 rounded-xl bg-purple-dark px-8 py-2 text-xl font-semibold uppercase text-white transition hover:bg-purple-600">
+                                Demo
+                            </button>
+                        </a>
+                        <a href={project?.pageDetails.linkRepo} target="_blank">
+                            <button
+                                className="mt-4 rounded-xl bg-purple-dark px-8 py-2 text-xl font-semibold uppercase text-white transition hover:bg-purple-600">
+                                Repository
+                            </button>
+                        </a>
+                    </div>
 
                 </div>
-                <div className="col-span-4 rounded-xl p-4 shadow-lg shadow-gray-400 md:col-span-1">
+                <div className="col-span-4 my-8 rounded-xl p-4 shadow-lg shadow-gray-400 md:col-span-1 md:my-0">
                     <div className="p-2">
                         <p className="pb-2 text-center font-bold">Technologies</p>
                         <div className="grid-cols-3 md:grid-cols-1">
@@ -79,9 +87,6 @@ export default function ProjectScreen({ params }: IProps) {
                     </div>
 
                 </div>
-                <Link href={"/#projects"} className="uppercase underline">
-                    Back
-                </Link>
             </div>
         </main>
     )

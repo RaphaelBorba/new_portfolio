@@ -57,6 +57,44 @@ export const projectsData = {
     title: "What I Have Built",
     projects: [
         {
+            title: "Evently",
+            mainStack: "Next JS",
+            imgPath: "/projects/evently.png",
+            pagePath: "evently",
+            pageDetails: {
+                description: `    <h3 className="">Evently: A Next.js 14 Innovation</h3>
+                <p>Greetings, tech enthusiasts! 🌟 Over the Christmas holiday, I embarked on a thrilling project Evently. Powered
+                 by Next.js 14, this venture explores the realms of Server Actions, Shadcn-UI elegance, Stripe for secure payments,
+                  and the dynamic capabilities of MongoDB. 🛠️</p>
+                <h4 className="">Project Highlights:</h4>
+                <ul>
+                  <li>- Event Mastery: Effortlessly craft and manage events with the finesse of Next.js 14's Server Actions.</li>
+                  <li>- Aesthetic Excellence: Experience a sleek and user-friendly interface, thanks to the magic of Shadcn-UI.</li>
+                  <li>- Financial Security: Seamlessly transact with confidence through integrated Stripe payments.</li>
+                  <li>- Data Dynamo: Utilize MongoDB for dynamic and scalable event data storage.</li>
+                  <li>- Empowering Creativity: Beyond ticketing, Evently empowers users to curate and manage their unique events.</li>
+                </ul>
+                <p>Evently is more than a ticketing platform; it's a holistic solution designed for both 
+                organizers and attendees. 🎉 Dive into the seamless experience!</p>`,
+                linkDeploy: "https://evently-ten-xi.vercel.app/",
+                linkRepo: "https://github.com/RaphaelBorba/evently",
+                stack: [
+                    "Node.js",
+                    "React.js",
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "Stripe",
+                    "Zod",
+                    "Clerk Auth",
+                    "React Hook Form",
+                    "Shadcn",
+                    "Uploadthing",
+                    "MongoDB",
+                ]
+            }
+        },
+        {
             title: "Portfolio",
             mainStack: "Next JS",
             imgPath: "/projects/portfolio.png",

@@ -69,7 +69,7 @@ export default function Contact() {
                                     <label htmlFor="message" className="py-2 text-sm uppercase">Message</label>
                                     <textarea rows={10} id="message" className="rounded-lg border-2 border-gray-300 p-3" />
                                 </div>
-                                <button className="mt-4 w-full p-4 text-gray-100">Send Message</button>
+                                <button className="button_gradiant mt-4 w-full p-4 text-gray-100">Send Message</button>
                             </form>
                         </div>
                     </div>
