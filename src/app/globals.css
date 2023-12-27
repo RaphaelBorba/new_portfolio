@@ -23,10 +23,6 @@ html{
         @apply text-3xl sm:text-4xl
     }
 
-    li{
-        @apply cursor-pointer
-    }
-
 }
 
 /* GRADIENT COLORS */

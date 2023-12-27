@@ -66,11 +66,11 @@ export const projectsData = {
                 <p>Greetings, tech enthusiasts! 🌟 Over the Christmas holiday, I embarked on a thrilling project Evently. Powered
                  by Next.js 14, this venture explores the realms of Server Actions, Shadcn-UI elegance, Stripe for secure payments,
                   and the dynamic capabilities of MongoDB. 🛠️</p>
-                <h4 className="">Project Highlights:</h4>
+                <h4>Project Highlights:</h4>
                 <ul>
-                  <li>- Event Mastery: Effortlessly craft and manage events with the finesse of Next.js 14's Server Actions.</li>
-                  <li>- Aesthetic Excellence: Experience a sleek and user-friendly interface, thanks to the magic of Shadcn-UI.</li>
-                  <li>- Financial Security: Seamlessly transact with confidence through integrated Stripe payments.</li>
+                  <li className="cursor-default">- Event Mastery: Effortlessly craft and manage events with the finesse of Next.js 14's Server Actions.</li>
+                  <li className="cursor-default">- Aesthetic Excellence: Experience a sleek and user-friendly interface, thanks to the magic of Shadcn-UI.</li>
+                  <li className="cursor-default">- Financial Security: Seamlessly transact with confidence through integrated Stripe payments.</li>
                   <li>- Data Dynamo: Utilize MongoDB for dynamic and scalable event data storage.</li>
                   <li>- Empowering Creativity: Beyond ticketing, Evently empowers users to curate and manage their unique events.</li>
                 </ul>
@@ -100,11 +100,16 @@ export const projectsData = {
             imgPath: "/projects/portfolio.png",
             pagePath: "portfolio",
             pageDetails: {
-                description: `Welcome to my portfolio, a showcase of my work constructed with the latest stack
-                I'm studying – Next 14. It reflects my commitment to staying at the forefront of technology.
-                Each project is a story of problem-solving, creativity, and technical prowess. 
-                This space invites developers, collaborators, and tech enthusiasts to explore my 
-                innovative solutions and ideas.🚀`,
+                description: `  <h3>Portfolio🚀</h3>
+                <p>Explore my portfolio, a curated collection highlighting the projects I've undertaken and the skills I've been studying:</p>
+                <ul>
+                  <li><strong>Project Showcase:</strong> Discover a variety of projects demonstrating my hands-on experience and creative problem-solving.</li>
+                  <li><strong>Skill Development:</strong> Witness the evolution of my skills, from mastering languages and frameworks to innovative problem-solving approaches.</li>
+                  <li><strong>Continuous Learning:</strong> A testament to my commitment to staying updated with the latest technologies and industry best practices.</li>
+                  <li><strong>Passion for Innovation:</strong> Each project reflects not just technical proficiency but a passion for innovation, user-centric design, and seamless functionality.</li>
+                </ul>
+                <p>Join me on this journey where my portfolio becomes a visual narrative of my growth as a developer.
+                 From coding challenges to full-fledged projects, each entry is a chapter in my ongoing learning and exploration.</p>`,
                 linkDeploy: "/",
                 linkRepo: "https://github.com/RaphaelBorba/new_portfolio",
                 stack: [
@@ -122,13 +127,18 @@ export const projectsData = {
             imgPath: "/projects/carhub.png",
             pagePath: "carhub",
             pageDetails: {
-                description: `Explore Car Hub, a learning endeavor in mastering Next.js, React, and Tailwind CSS.
-                This project, offers a seamless car booking experience.
-                Efficiency is at the forefront with Next.js, ensuring a responsive React app.
-                Tailwind CSS provides a clean, responsive design, and API integrations fetch real-time car rental data.
-                User empowerment is key, featuring dynamic search and filter components.
-                The project's structure prioritizes code maintainability with organized folders.                
-                Experience the fusion of tech and user-centric design at Car Hub. 🚗✨`,
+                description: `  <h3>CarHub: Booking Cars</h3>
+                <p>Delve into the world of Next.js with my latest project, designed to study and implement key features:</p>
+                <ul>
+                  <li><strong>Search:</strong> Efficient and dynamic search functionality for seamless navigation.</li>
+                  <li><strong>Filtering:</strong> Advanced filtering options for a personalized user experience.</li>
+                  <li><strong>External Requests:</strong> Real-time data fetching from external APIs for up-to-date content.</li>
+                  <li><strong>Responsive Design:</strong> A visually pleasing interface that adapts to various devices.</li>
+                </ul>
+                <p>This project not only demonstrates technical proficiency in Next.js but also showcases creativity in 
+                feature development, focusing on user engagement and interactivity. Join me in this exploration where
+                 coding meets innovation.</p>
+              `,
                 linkDeploy: "https://car-hub-sandy.vercel.app/",
                 linkRepo: "https://github.com/RaphaelBorba/Car-Hub",
                 stack: [
@@ -146,11 +156,20 @@ export const projectsData = {
             imgPath: "/projects/spiderverse.png",
             pagePath: "spiderverse",
             pageDetails: {
-                description: `This is the repository for the Spider-Verse project,
-                    developed during a live on YouTube in partnership with DIO.
-                    🕷️ The project consists of an interactive application inspired by the Spider-Man universe,
-                    using leading front-end stacks: React, Next.js 13, the Framer Motion library, Sass,
-                    and TypeScript to create an amazing and high-performance visual project. 🚀🎨`,
+                description: `  <h3>Spider-Verse Project</h3>
+                <p>Explore the Spider-Verse project, a collaboration developed live on YouTube in partnership with DIO. 🕷️
+                 This interactive application is a visual masterpiece inspired by the Spider-Man universe, leveraging
+                  cutting-edge front-end stacks:</p>
+                <ul>
+                  <li><strong>React & Next.js 13:</strong> Harnessing the power of React and the latest version of Next.js for a robust and dynamic user interface.</li>
+                  <li><strong>Framer Motion Library:</strong> Adding smooth animations and transitions for an engaging user experience.</li>
+                  <li><strong>Sass:</strong> Utilizing the power of Sass for efficient and maintainable styling.</li>
+                  <li><strong>TypeScript:</strong> Ensuring a high level of code integrity and developer productivity.</li>
+                  <li><strong>Not Responsive:</strong> This web site isn't responsive, but I intend to make it soon.</li>
+                </ul>
+                <p>This project is a testament to creativity and high-performance development, blending the excitement of
+                 the Spider-Verse with the latest advancements in web technology. 🚀🎨</p>
+              `,
                 linkDeploy: "https://spider-verse.vercel.app/",
                 linkRepo: "https://github.com/RaphaelBorba/spider_verse",
                 stack: [
@@ -169,14 +188,17 @@ export const projectsData = {
             imgPath: "/projects/trackit.png",
             pagePath: "trackit",
             pageDetails: {
-                description: `Designed during the early stages of my React journey, this app is all about cultivating good habits.
-                    With the Habit Tracker, you have the power to create and monitor your habits seamlessly.
-                    Simply create a new habit, specify the days you want to commit,
-                    and mark your progress with a satisfying check when you've successfully completed a task.
-                    This app not only marked the beginning of my React exploration but also reflects the essence of simplicity and functionality.
-                    It's a testament to my commitment to creating practical solutions that enhance daily life.
-                    Explore the Habit Tracker and witness the starting point of my React learning journey,
-                    where every click signifies a step towards building better habits. 🌟🔄`,
+                description: `<h2>Habit Tracker App</h2>
+                <p>Embark on a journey of cultivating good habits with the Habit Tracker app, designed during the early stages
+                 of my React exploration. 🌟🔄 This application empowers you to effortlessly create and monitor your habits:</p>
+                <ul>
+                  <li><strong>Create and Monitor:</strong> Seamlessly create new habits, specify commitment days, and effortlessly track your progress.</li>
+                  <li><strong>Simplicity and Functionality:</strong> Reflecting the essence of simplicity and functionality, this app marks the beginning of my React journey.</li>
+                  <li><strong>Practical Solutions:</strong> A testament to my commitment to creating practical solutions that enhance daily life and promote positive habits.</li>
+                </ul>
+                <p>Explore the Habit Tracker and witness the starting point of my React learning journey, where every click signifies a step
+                 towards building better habits.</p>
+              `,
                 linkDeploy: "https://trackit-rust.vercel.app/",
                 linkRepo: "https://github.com/RaphaelBorba/TrackIt",
                 stack: [

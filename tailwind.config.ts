@@ -13,6 +13,9 @@ const config: Config = {
         "blue-dark":"#1f2937",
         "purple-dark":"#5651e5",
         "blue-light":"#709dff"
+      },
+      minWidth:{
+        '3':"0.75rem"
       }
     },
   },
