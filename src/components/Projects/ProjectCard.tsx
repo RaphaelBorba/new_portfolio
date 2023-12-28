@@ -1,5 +1,8 @@
+import { AnimationControls } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { MotionDiv } from "../MotionDiv";
+import { variants } from "@/constants";
 
 interface IProps {
     data: {
@@ -7,14 +10,26 @@ interface IProps {
         mainStack: string;
         imgPath: string;
         pagePath:string;
-    }
+    },
+    index:number,
+    mainControls:AnimationControls
 }
 
-export default function ProjectCard({ data }: IProps) {
+export default function ProjectCard({ data, index, mainControls }: IProps) {
 
     return (
 
-        <div className="projects__card group">
+        <MotionDiv 
+        variants={variants}
+            initial="hidden"
+            animate={mainControls}
+            transition={{
+                delay: index*0.5,
+                ease: "easeInOut",
+                duration: 1
+            }}
+            viewport={{ amount: 0 }}
+        className="projects__card group">
             <Image
                 alt={data.title}
                 src={data.imgPath}
@@ -29,6 +44,6 @@ export default function ProjectCard({ data }: IProps) {
                     <p className="project__card__info__button">More Info</p>
                 </Link>
             </div>
-        </div>
+        </MotionDiv>
     )
 }

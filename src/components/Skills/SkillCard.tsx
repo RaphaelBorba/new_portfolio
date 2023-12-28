@@ -1,25 +1,20 @@
 import Image from "next/image";
 import { MotionDiv } from "../MotionDiv";
 import { AnimationControls } from "framer-motion";
+import { variants } from "@/constants";
 
 interface IProps {
     tech: string;
     imgPath: string;
     index:number;
-    mainControls: AnimationControls
-}
-
-
-const variant = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    mainControls?: AnimationControls
 }
 
 export default function SkillCard({ imgPath,mainControls, tech,index }: IProps) {
 
     return (
         <MotionDiv
-            variants={variant}
+            variants={variants}
             initial="hidden"
             animate={mainControls}
             transition={{
