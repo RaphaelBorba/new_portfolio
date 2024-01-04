@@ -58,7 +58,7 @@ export const projectsData = {
     projects: [
         {
             title: "Evently",
-            mainStack: "Next JS",
+            mainStack: "Next JS | MongoDB",
             imgPath: "/projects/evently.png",
             pagePath: "evently",
             pageDetails: {
@@ -118,6 +118,7 @@ export const projectsData = {
                     "Next",
                     "Tailwind",
                     "ESLint",
+                    "Framer Motion",
                 ]
             }
         },

@@ -35,9 +35,6 @@ export default function ProjectScreen({ params }: IProps) {
         }))
     }, [params])
 
-    console.log(indexProject);
-
-
     return (
         <main className="w-full">
             <div className="relative h-[30vh] w-screen max-w-full px-10 lg:h-[40vh]">
@@ -59,7 +56,7 @@ export default function ProjectScreen({ params }: IProps) {
                     <p className="section__first__title">Project</p>
                     <h2>Overview</h2>
                     <div className="mt-4 flex flex-col gap-4" dangerouslySetInnerHTML={{ __html: project?.pageDetails.description! }} />
-                    <div className="flex flex-row gap-4 text-white">
+                    <div className="flex flex-row justify-center gap-4 pt-8 text-white md:justify-start">
                         <a href={project?.pageDetails.linkDeploy} target="_blank">
                             <button
                                 className="mt-4 rounded-xl bg-purple-dark px-8 py-2 text-xl font-semibold uppercase  shadow-md shadow-gray-400 transition duration-500 hover:bg-purple-600">

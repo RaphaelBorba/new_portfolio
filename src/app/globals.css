@@ -34,7 +34,7 @@ html{
 /* HEADER DESKTOP */
 
 .header__desktop{
-    @apply flex h-full  w-full items-center justify-between px-2 2xl:px-16
+    @apply flex h-full  w-full items-center justify-between px-2 2xl:px-16 transition duration-300
 }
 
 .header__desktop__li{
@@ -78,15 +78,15 @@ html{
 
 .projects__card{
 
-    @apply relative flex h-auto w-full items-center justify-center transition duration-1000 rounded-xl p-4 shadow-xl shadow-gray-400 hover:bg-purple-dark
+    @apply relative h-auto w-full flex flex-col gap-5 items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 
 }
 
 .project__card__info__button{
-    @apply cursor-pointer rounded-lg bg-white w-44 py-3 text-center text-lg font-bold text-gray-700
+    @apply cursor-pointer rounded-lg text-center mx-auto text-lg font-bold
 }
 
 .project__card__info__box{
-    @apply absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 transition duration-500
+    @apply hidden md:flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full opacity-0 transition duration-500 rounded-xl bg-purple-dark/80
 }
 
 

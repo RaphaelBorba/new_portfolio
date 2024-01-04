@@ -1,22 +1,17 @@
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { AiOutlineMenu } from 'react-icons/ai'
 
-export default function DesktopHeader({ handleNav }: { handleNav: () => void }) {
-
-    const router = usePathname()
-    const [pathName, setPathName] = useState("")
-    
-
-    useEffect(() => {
-        setPathName(router)
-        
-      }, [router]);
+export default function DesktopHeader({ handleNav, pathName, shadow }:
+    {
+        shadow: boolean,
+        handleNav: () => void,
+        pathName: Params | null
+    }) {
 
     return (
-        <div className={`header__desktop ${pathName === "/" && "bg-gray-light"}`}>
+        <div className={`header__desktop ${(!pathName?.projectName || shadow) && "bg-gray-light"}`}>
             <Link href="/#main">
                 <Image
                     className="cursor-pointer"
@@ -27,7 +22,7 @@ export default function DesktopHeader({ handleNav }: { handleNav: () => void }) 
                 />
             </Link>
             <div>
-                <ul className={`hidden md:flex ${pathName !== "/" && "text-gray-light"}`}>
+                <ul className={`hidden transition duration-300 md:flex ${(pathName?.projectName && !shadow) && "text-gray-light"}`}>
                     <Link href="/#main">
                         <li className="header__desktop__li">Home</li>
                     </Link>
@@ -44,7 +39,7 @@ export default function DesktopHeader({ handleNav }: { handleNav: () => void }) 
                         <li className="header__desktop__li">Contact</li>
                     </Link>
                 </ul>
-                <div onClick={handleNav} className={`md:hidden ${pathName !== "/" && "text-gray-light"}`}>
+                <div onClick={handleNav} className={`transition duration-300 md:hidden ${(pathName?.projectName && !shadow) && "text-gray-light"}`}>
                     <AiOutlineMenu size={25} />
                 </div>
             </div>
