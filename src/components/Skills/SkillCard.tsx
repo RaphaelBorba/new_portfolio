@@ -20,7 +20,7 @@ export default function SkillCard({ imgPath,mainControls, tech,index }: IProps) 
             transition={{
                 delay: index*0.2,
                 ease: "easeInOut",
-                duration: 0.5
+                duration: 0.3
             }}
             viewport={{ amount: 0 }}
             className="rounded-xl p-6 shadow-xl duration-200 ease-in hover:scale-105">

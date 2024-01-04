@@ -26,7 +26,7 @@ export default function ProjectCard({ data, index, mainControls }: IProps) {
             transition={{
                 delay: index*0.5,
                 ease: "easeInOut",
-                duration: 1
+                duration: 0.7
             }}
             viewport={{ amount: 0 }}
         className="projects__card group">

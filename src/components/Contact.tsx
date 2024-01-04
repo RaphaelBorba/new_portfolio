@@ -1,4 +1,9 @@
 "use client"
+import { variants } from "@/constants";
+import { MotionDiv } from "./MotionDiv";
+import { useEffect, useRef } from "react";
+import { useInView, useAnimation } from "framer-motion";
+import { aboutData } from "@/constants";
 import { handleScroll } from "@/utils";
 import Image from "next/image";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
@@ -10,18 +15,37 @@ import { FormEvent } from "react";
 
 export default function Contact() {
 
-    const handleForm = (e:FormEvent) => {
+    const handleForm = (e: FormEvent) => {
         e.preventDefault()
     }
 
+    const ref = useRef(null)
+    const isInView = useInView(ref)
+
+    const mainControls = useAnimation()
+
+    useEffect(() => {
+        if (isInView) {
+            mainControls.start("visible")
+        }
+    }), [isInView]
+
     return (
         <section id="contact" className="w-full scroll-mt-10 lg:h-screen">
-            <div className="m-auto w-full max-w-[1240px] px-2 py-16">
+            <MotionDiv
+                variants={variants}
+                initial="hidden"
+                animate={mainControls}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 1.5
+                }}
+                className="m-auto w-full max-w-[1240px] px-2 py-16">
                 <p className="section__first__title">Contact</p>
                 <h2 className="py-4">Get In Touch</h2>
                 <div className="grid gap-8 lg:grid-cols-5">
                     {/* LEFT */}
-                    <div className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2">
+                    <div ref={ref} className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2">
                         <div className="h-full lg:p-4">
                             <div>
                                 <Image
@@ -83,7 +107,7 @@ export default function Contact() {
                     </div>
 
                 </div>
-            </div>
+            </MotionDiv>
         </section>
     )
 }
