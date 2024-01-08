@@ -57,6 +57,43 @@ export const projectsData = {
     title: "What I Have Built",
     projects: [
         {
+            title: "WealthLearn",
+            mainStack: "Next TS | Nest TS | PostgreSQL",
+            imgPath: "/projects/wealthlearn.png",
+            pagePath: "wealthlearn",
+            pageDetails: {
+                description: `    <h3 className="">Wealthlearn is a web site where you are be able to study finances </h3>
+                <p>Think of it as a friendly guide that explains things like stocks, bonds, and mutual funds in simple, 
+                jargon-free terms. I'll also be sharing what I know about taxes and the amazing things (instead of "cool things")
+                 that can happen when you invest your money – not just growing your numbers, but building your future, securing 
+                 retirement, and maybe even opening up some exciting new avenues.</p>
+                <h4>Project Highlights:</h4>
+                <ul>
+                  <li className="cursor-default">- Learn all about investments: Here, I'll teach you about the different types of investments you can buy, from stocks and bonds to mutual funds.</li>
+                  <li className="cursor-default">- Test your investing skills: You'll be able to simulate investments, giving you practical experience in how money works in the market.</li>
+                  <li className="cursor-default">- Track your progress: A dynamic dashboard will show you how your test investments are performing, letting you visualize your financial journey.</li>
+                  <li>- Built with the latest technology: I'm using the newest tools and frameworks to make Wealthlearn a reliable and user-friendly platform.</li>
+                </ul>
+                <p>Wealthlearn is a project I've been wanting to do for a long time. Now that I 
+                have the knowledge and skills to make it possible, I've finally started building it 😊.</p>`,
+                linkDeploy: "/project/wealthlearn",
+                linkRepo: "/project/wealthlearn",
+                stack: [
+                    "TypeScript",
+                    "React.js",
+                    "Next.js",
+                    "TailwindCSS",
+                    "Shadcn",
+                    "Node.js",
+                    "Nest.js",
+                    "JWT",
+                    "Prisma",
+                    "PostgreSQL",
+                    "API Rest",
+                ]
+            }
+        },
+        {
             title: "Evently",
             mainStack: "Next JS | MongoDB",
             imgPath: "/projects/evently.png",
