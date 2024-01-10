@@ -57,8 +57,8 @@ export const projectsData = {
     title: "What I Have Built",
     projects: [
         {
-            title: "WealthLearn",
-            mainStack: "Next TS | Nest TS | PostgreSQL",
+            title: "WealthLearn: Coming Soon",
+            mainStack: "Next JS | Nest JS | PostgreSQL",
             imgPath: "/projects/wealthlearn.png",
             pagePath: "wealthlearn",
             pageDetails: {
@@ -90,6 +90,7 @@ export const projectsData = {
                     "Prisma",
                     "PostgreSQL",
                     "API Rest",
+                    "Figma",
                 ]
             }
         },
