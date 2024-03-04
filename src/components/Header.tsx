@@ -14,7 +14,7 @@ export default function Header() {
     useEffect(() => {
 
         const handleShadow = () => {
-            if (window.scrollY >= 160) setShadow(true)
+            if (window.scrollY >= 50) setShadow(true)
             else setShadow(false)
         }
         window.addEventListener('scroll', handleShadow)

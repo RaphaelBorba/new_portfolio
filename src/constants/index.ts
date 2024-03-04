@@ -76,8 +76,8 @@ export const projectsData = {
                 </ul>
                 <p>Wealthlearn is a project I've been wanting to do for a long time. Now that I 
                 have the knowledge and skills to make it possible, I've finally started building it 😊.</p>`,
-                linkDeploy: "/project/wealthlearn",
-                linkRepo: "/project/wealthlearn",
+                linkDeploy: "https://github.com/RaphaelBorba/wealthlearn_front",
+                linkRepo: "https://github.com/RaphaelBorba/wealthlearn_back",
                 stack: [
                     "TypeScript",
                     "React.js",

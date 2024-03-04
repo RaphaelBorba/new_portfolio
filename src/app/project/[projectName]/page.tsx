@@ -57,16 +57,17 @@ export default function ProjectScreen({ params }: IProps) {
                     <h2>Overview</h2>
                     <div className="mt-4 flex flex-col gap-4" dangerouslySetInnerHTML={{ __html: project?.pageDetails.description! }} />
                     <div className="flex flex-row justify-center gap-4 pt-8 text-white md:justify-start">
+                        
                         <a href={project?.pageDetails.linkDeploy} target="_blank">
                             <button
                                 className="mt-4 rounded-xl bg-purple-dark px-8 py-2 text-xl font-semibold uppercase  shadow-md shadow-gray-400 transition duration-500 hover:bg-purple-600">
-                                Demo
+                                {project?.pagePath === "wealthlearn" ? "Front-end" : "Demo"}
                             </button>
                         </a>
                         <a href={project?.pageDetails.linkRepo} target="_blank">
                             <button
                                 className="mt-4 rounded-xl bg-purple-dark px-8 py-2 text-xl font-semibold uppercase shadow-md shadow-gray-400 transition duration-500 hover:bg-purple-600">
-                                Repository
+                                {project?.pagePath === "wealthlearn" ? "Back-end" : "Repository"}
                             </button>
                         </a>
                     </div>
