@@ -3,20 +3,19 @@ export const mainData = {
     smallTitle: "Let's create something new!",
     introdution: "Hi, I'm",
     titleName: "Raphael",
-    secondTitle: "A Full-Stack Web Developer",
-    description: "I am a full-stack web developer specializing in building web sites!"
+    secondTitle: "Full Stack Software Engineer",
+    description: "I am a software engineer specializing in building scalable and efficient web applications!"
 }
 
 export const aboutData = {
     sectionTitle: "ABOUT",
     title: "Who I am",
-    firstText: `Hello there! 👋 I'm Raphael Borba, a seasoned Full Stack Developer with over a year of
-        experience in the ever-evolving tech landscape. Having started my programming journey in 2020,
-        I've swiftly transitioned from being a Junior Developer to my current role as a Full Stack Developer Trainee.`,
+    firstText: `Hello there! 👋 I'm Raphael Borba, Full Stack Software Engineer with more than 3 years of
+        experience in the tech landscape. Having started my programming journey in 2020, when I started a college in Computer Science.`,
     secondText: `Throughout my academic pursuits in programming at college, complemented by numerous bootcamps and courses,
         I've not only honed my skills but also gained practical, hands-on experience.
-        My love for programming is deeply rooted in the daily thrill of overcoming challenges and transforming
-        problems into impactful solutions.`,
+        I have gained valuable experience working with startups, junior companies, and international organizations, 
+        where I developed and maintained scalable systems and integrated solutions using technologies.`,
     thirdText: `As I continue to navigate the dynamic world of development, 
         I bring a rich tapestry of theoretical insights and real-world application to my work.
         Join me on this coding adventure where innovation meets problem-solving, and together,
@@ -31,6 +30,7 @@ export const skillsData = {
         { tech: "CSS", path: "/skills/css.svg" },
         { tech: "Javascript", path: "/skills/javascript.svg" },
         { tech: "Typescript", path: "/skills/typescript.svg" },
+        { tech: "Python", path: "/skills/python.svg" },
         { tech: "React", path: "/skills/react.svg" },
         { tech: "Next", path: "/skills/next.svg" },
         { tech: "Node", path: "/skills/node.svg" },
